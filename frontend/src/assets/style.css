@@ -1,0 +1,860 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    border:0;
+  }
+  
+  /*********** Homepage ************************/
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .container h1 {
+    overflow: hidden;
+    text-align: center;
+    padding: 0 4vw;
+    font-size: 1vw;
+  }
+  
+  .container h1:before,
+  .container h1:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  
+  .container h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  
+  .container h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+  
+  .nav li a {
+    text-decoration: none;
+    font-size: 1vw;
+  }
+
+  .nav li a:visited {
+    color:black;
+  }
+
+  .nav li a:hover {
+    color:orange;
+  }
+   
+      
+  
+  
+  img.backgroundImg {
+    width: 55%;
+    position: absolute;
+    margin-left: 44vw;
+  }
+  img.path { 
+    width: 100%;
+    margin-top: 18vw;
+  }
+  
+  header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  img.images {
+    height: 28vh;
+    border: 1px solid black;
+    border-radius: 19px;
+}
+  
+  .logo {
+    cursor: pointer;
+    margin: 0 0 0 9vw;
+    width: 7vw;
+  }
+  
+  ul.nav {
+    display: inline-flex;
+    list-style-type: none;
+    gap: 4vw;
+    cursor: pointer;
+    align-items: center;
+    font-size: 1vw;
+    margin: 0 10vw 0 0;
+  }
+  
+  ul.nav li img {
+    width: 2vw;
+  }
+  
+  .top {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .top h2 {
+    position: absolute;
+    font-size: 7vw;
+    padding-left: 10%;
+  }
+  
+ .top p {
+  position: absolute;
+    width: 29vw;
+    padding-left: 10%;
+    padding-top: 8%;
+    font-size: 1.3vw;
+}
+
+ .watch-now-btn {
+  margin-top: 20%;
+  margin-left: 10%;
+  position: absolute;
+  border-radius: 2vw;
+  text-align: center;
+  padding: 0.5vw 2vw;
+  width: 10.3vw;
+  font-size: 1vw;
+}
+
+.watch-now-btn a {
+  text-decoration: none;
+}
+
+.watch-now-btn a:visited{
+  color:black;
+}
+.watch-now-btn a:hover{
+  color:orange;
+}
+
+  /******************************** GRIDS ********************************/
+  
+  .arrows {
+    gap: 1.2vw;
+    display: flex;
+    padding: 1vw;
+  }
+  .arrows img{
+    width:3vw;
+    height:3vw;
+  }
+  
+  /******************************** Newly-Released ******************************/
+  .newly-released {
+    position: relative;
+    margin-top: 2vw;
+    font-size: 2vw;
+    padding-left: 11%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    align-items: center;
+}
+
+  .newly-released-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
+    grid-row-gap: 4vw;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-items: start;
+    margin-top: 2vw;
+    justify-content: start;
+  }
+
+  .newly-released-movies .card{
+    position: relative;
+  }
+  
+  .newly-released-movies .card .info {
+    display: flex;
+    gap: 1vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+}
+  
+  .newly-released-movies .card .info p {
+   color: rgb(79, 78, 78);
+   font-weight: 100;
+   font-size: 1vw;
+  }
+
+  .newly-released-movies .card .info h4 {
+    font-weight: 400;
+    font-size: 1.2vw;
+  }
+  
+  .newly-released-movies .card .info .trailer-Btn {
+    background-color: rgb(41, 41, 41);
+    border-radius: 1vw;
+    color: white;
+    font-weight: 500;
+    font-size: 1vw;
+    padding: .5vw 1vw;
+  }
+ 
+  .newly-released-movies .card .img-container {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+  }
+  
+  .newly-released-movies .card img {
+    width: 100%;
+  }
+
+  .newly-released-movies .card img.fav {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+ 
+ 
+  /******************************** Upcoming ********************************/
+  
+  .upcoming {
+    position: relative;
+    margin-top: 2vw;
+    font-size: 2vw;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    align-items: center;
+  }
+  
+  #new{
+    width: 20vw;
+    padding:1vw;
+  }
+  
+  .upcoming-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
+    grid-row-gap: 4vw;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-items: start;
+    margin-top: 2vw;
+    justify-content: start;
+  }
+  
+  .upcoming-movies .card{
+    position: relative;
+  }
+  .upcoming-movies .card .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    padding-top: 1vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .upcoming-movies .card .info p{
+    color: rgb(79, 78, 78);
+   font-weight: 100;
+   font-size: 1vw;
+  }
+
+  .upcoming-movies .card .info h4 {
+    font-weight: 400;
+    font-size: 1.2vw;
+  }
+  .upcoming-movies .card .info .trailer-Btn {
+    background-color: rgb(41, 41, 41);
+    border-radius: 1vw;
+    color: white;
+    font-weight: 500;
+    font-size: 1vw;
+    padding: .5vw 1vw;
+  }
+  .upcoming-movies .card .img-container {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+  }
+  
+  .upcoming-movies .card img {
+    width: 100%;
+  }
+  .upcoming-movies .card img.fav {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+  
+  
+  
+  /************************************ FOOTER ********************************/
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back {
+    margin-top: 10vw;
+    background-color: rgb(56 56 56);
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    padding: 0.5vw 1vw;
+  }
+
+  .back a{
+    text-decoration: none;
+    font-weight: 500;
+    color:white;
+  }
+
+  .back a:visited {
+    color:white;
+  }
+
+  .back a:hover {
+    color:orange;
+  }
+
+
+  
+  .footer-logo {
+    width: 15vw;
+  }
+  .footer-logo img {
+    width: 100%;
+  }
+  .about-us {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    font-size: 1vw;
+    margin-bottom: 2vw;
+  }
+  
+  
+  .copyright {
+    width: 100%;
+    border-top: 0.2vw solid #000000;
+    display: flex;
+    justify-content: center;
+    padding: 2vw 0;
+  }
+  
+  .copyright img {
+    width: 22vw;
+  }
+  
+  /**************************************************************             ************************************************************/
+  /************************************************************** Play Page  ************************************************************/
+  /**************************************************************             ************************************************************/
+.shadow {
+  width: 100%;
+  min-height: 75vw;
+  position: absolute;
+  background-color: rgb(0 0 0 / 25%);
+  backdrop-filter: blur(2px);
+
+}
+  
+img.backgroundImg1 {
+  width: 55%;
+  position: absolute;
+  margin-left: 44vw;
+}
+
+.active-movie {
+  width: 80vw;
+  min-height: 40vw;
+  position: fixed;
+  transform: translate(11%, 10%);
+  background-color: rgb(0 0 0 / 55%);
+  border-radius: 1vw;
+  color: white;
+  backdrop-filter: blur(12px);
+  display: flex;
+  gap: 2vw;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  padding: 1vw;
+  z-index: 3;   
+}
+
+.close{
+  border-radius: 50%;
+  padding: 0.5vw;
+  border: 0;
+  font-size: 1vw;
+}
+
+.close a{
+  text-decoration: none;
+  color:gray;
+}
+
+.close a:hover{
+    color:orange;
+}
+  
+.play-movie {
+  width: 75vw;
+  min-height: 25vw;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 2vw;
+}
+/* .movie-img{
+  width: 90vw;
+  height: 20vw;
+  border-radius: 50%;
+  border: 0.1vw solid;
+  padding: 2vw;
+  background: #ffffffe8;
+  display: flex;
+  align-items: center;
+} */
+  
+.movie-img img{
+  width:15vw;
+}
+
+.discription{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vw;
+}
+
+.discription a {
+    text-decoration: none;
+}
+
+.discription p {
+  font-size: 1vw;
+}
+
+.discription h2{
+ font-size: 2vw;
+ font-weight: 400;
+}
+
+.discription h4{
+  font-size: 2vw;
+  font-weight: 400;
+  color:rgb(248, 190, 0);
+ }
+  
+.genre{
+  gap: 1vw;
+  display: flex;
+}
+
+.genre p {
+  background: rgb(255 255 255 / 50%);
+  text-align: center;
+  padding: 0.5vw 1vw;
+  border-radius: .8vw;
+}
+#about{
+  word-spacing: 0.3vw;
+  width: 44vw;
+  font-size: 1.005vw;
+}
+  
+.playnow-Btn{
+  border-radius: .8vw;
+  color: white;
+  font-weight: 500;
+  font-size: 2vw;
+  padding: 0.5vw 1vw;
+  background: #494949e8;
+  border: 0;
+  margin-top: 5vw;
+  display: flex;
+  align-items: center;
+  gap:1vw;
+}
+
+.playnow-Btn img {
+  width: 3vw;
+}
+
+
+  /**************************************************************             ************************************************************/
+  /************************************************************** Category Page  ************************************************************/
+  /**************************************************************             ************************************************************/
+
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+  }
+
+  .container1 h1 {
+    overflow: hidden;
+    text-align: center;
+    padding: 0 4vw;
+    font-size: 1vw;
+  }
+  
+  .container1 h1:before,
+  .container1 h1:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  
+  .container1 h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  
+  .container1 h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+  /******************************** Animated ********************************/
+  
+  .animated {
+    position: relative;
+    margin-top: 2vw;
+    font-size: 2vw;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    align-items: center;
+  }
+  
+  #new{
+    width: 20vw;
+    padding:1vw;
+  }
+  
+  .animated-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
+    grid-row-gap: 4vw;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-items: start;
+    margin-top: 2vw;
+    justify-content:start;
+  }
+
+  .animated-movies .card{
+    position: relative;
+  }
+  
+  .animated-movies .card .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    padding-top: 1vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animated-movies .card .info p{
+    color: rgb(79, 78, 78);
+   font-weight: 100;
+   font-size: 1vw;
+  }
+
+  .animated-movies .card .info h4 {
+    font-weight: 400;
+    font-size: 1.2vw;
+  }
+  .animated-movies .card .info .trailer-Btn {
+    background-color: rgb(41, 41, 41);
+    border-radius: 1vw;
+    color: white;
+    font-weight: 500;
+    font-size: 1vw;
+    padding: .5vw 1vw;
+  }
+  .animated-movies .card .img-container {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+  }
+  
+  .animated-movies .card img {
+    width: 100%;
+  }
+  .animated-movies .card img.fav {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+  
+
+  /******************************** Crime ********************************/
+  
+  .crime {
+    position: relative;
+    margin-top: 2vw;
+    font-size: 2vw;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    align-items: center;
+  }
+  
+  #new{
+    width: 20vw;
+    padding:1vw;
+  }
+  
+  .crime-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
+    grid-row-gap: 4vw;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-items: start;
+    margin-top: 2vw;
+    justify-content: start;
+  }
+
+  .crime-movies .card{
+    position: relative;
+  }
+  
+  .crime-movies .card .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    padding-top: 1vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .crime-movies .card .info p{
+    color: rgb(79, 78, 78);
+   font-weight: 100;
+   font-size: 1vw;
+  }
+
+  .crime-movies .card .info h4 {
+    font-weight: 400;
+    font-size: 1.2vw;
+  }
+  .crime-movies .card .info .trailer-Btn {
+    background-color: rgb(41, 41, 41);
+    border-radius: 1vw;
+    color: white;
+    font-weight: 500;
+    font-size: 1vw;
+    padding: .5vw 1vw;
+  }
+  .crime-movies .card .img-container {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+  }
+  
+  .crime-movies .card img {
+    width: 100%;
+  }
+  .crime-movies .card img.fav {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+
+  /******************************** Romance ********************************/
+  
+  .romance {
+    position: relative;
+    margin-top: 2vw;
+    font-size: 2vw;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    align-items: center;
+  }
+  
+  #new{
+    width: 20vw;
+    padding:1vw;
+  }
+  
+  .romance-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
+    grid-row-gap: 4vw;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-items: start;
+    margin-top: 2vw;
+    justify-content: start;
+  }
+  .romance-movies .card{
+    position: relative;
+  }
+  
+  .romance-movies .card .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    padding-top: 1vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .romance-movies .card .info p{
+    color: rgb(79, 78, 78);
+   font-weight: 100;
+   font-size: 1vw;
+  }
+
+  .romance-movies .card .info h4 {
+    font-weight: 400;
+    font-size: 1.2vw;
+  }
+  .romance-movies .card .info .trailer-Btn {
+    background-color: rgb(41, 41, 41);
+    border-radius: 1vw;
+    color: white;
+    font-weight: 500;
+    font-size: 1vw;
+    padding: .5vw 1vw;
+  }
+  .romance-movies .card .img-container {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+  }
+  
+  .romance-movies .card img {
+    width: 100%;
+  }
+  .romance-movies .card img.fav {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+
+
+
+  /******************************** Romance ********************************/
+  
+  .action {
+    position: relative;
+    margin-top: 2vw;
+    font-size: 2vw;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    align-items: center;
+  }
+  
+  #new{
+    width: 20vw;
+    padding:1vw;
+  }
+  
+  .action-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
+    grid-row-gap: 4vw;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-items: start;
+    margin-top: 2vw;
+    justify-content: start;
+  }
+  .action-movies .card{
+    position: relative;
+  }
+  
+  .action-movies .card .info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    padding-top: 1vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-movies .card .info p{
+    color: rgb(79, 78, 78);
+   font-weight: 100;
+   font-size: 1vw;
+  }
+
+  .action-movies .card .info h4 {
+    font-weight: 400;
+    font-size: 1.2vw;
+  }
+  .action-movies .card .info .trailer-Btn {
+    background-color: rgb(41, 41, 41);
+    border-radius: 1vw;
+    color: white;
+    font-weight: 500;
+    font-size: 1vw;
+    padding: .5vw 1vw;
+  }
+  .action-movies .card .img-container {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+  }
+  
+  .action-movies .card img {
+    width: 100%;
+  }
+  .action-movies .card img.fav {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+
+
+  
